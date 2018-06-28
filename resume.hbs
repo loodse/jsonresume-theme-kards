@@ -74,7 +74,7 @@
 
                 <div class="col-twelve">
 
-                    <h5>Hello, World.</h5>
+                    <h5>Hello,</h5>
                     <h1>I'm {{name}}.</h1>
 
                     <p class="intro-position">
@@ -179,7 +179,8 @@
 
     <div class="row button-section">
         <div class="col-twelve">
-            <a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+            <a href="https://www.loodse.com/contact" title="Hire Me" class="button stroke ">Contact Us</a>
+            <!--TODO link to PDF-->
             <a href="#" title="Download CV" class="button button-primary">Download CV</a>
         </div>
     </div>
@@ -230,7 +231,8 @@
 
                             <div class="timeline-content">
                                 <h4>{{name}}</h4>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
+                                <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -249,7 +251,7 @@
 
             <div class="col-twelve resume-header">
 
-                <h2>Volunteer Work</h2>
+                <h2>Community Work</h2>
 
             </div> <!-- /resume-header -->
 
@@ -271,7 +273,8 @@
 
                             <div class="timeline-content">
                                 <h4>{{organization}}</h4>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
+                                <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -312,7 +315,8 @@
 
                             <div class="timeline-content">
                                 <h4>{{publisher}}</h4>
-                                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                                <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
+                                <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -365,6 +369,47 @@
         </div> <!-- /resume-timeline -->
     {{/if}}
 
+    {{#if resume.projects}}
+        <div class="row resume-timeline">
+
+
+            <div class="col-twelve resume-header">
+
+                <h2>Projects</h2>
+
+            </div> <!-- /resume-header -->
+
+            <div class="col-twelve">
+
+                <div class="timeline-wrap">
+
+                    {{#each resume.publications}}
+                        <div class="timeline-block">
+
+                            <div class="timeline-ico">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+
+                            <div class="timeline-header">
+                                <h3>{{name}}</h3>
+                                <p>{{date releaseDate}}</p>
+                            </div>
+
+                            <div class="timeline-content">
+                                <h4>{{publisher}}</h4>
+                                <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
+                                <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
+                            </div>
+
+                        </div> <!-- /timeline-block -->
+                    {{/each}}
+
+                </div> <!-- /timeline-wrap -->
+
+            </div> <!-- /col-twelve -->
+
+        </div> <!-- /resume-timeline -->
+    {{/if}}
 
 </section> <!-- /features -->
 
@@ -1011,10 +1056,11 @@
         </div>
 
         <div class="col-six tab-full">
-            <div class="copyright">
-                <span>© Copyright Kards 2016.</span>
-                <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-            </div>
+            <!--TODO update-->
+            <!--<div class="copyright">-->
+                <!--<span>© Copyright Kards 2016.</span>-->
+                <!--<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>-->
+            <!--</div>-->
         </div>
 
         <div id="go-top">
