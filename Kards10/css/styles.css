@@ -748,7 +748,7 @@ textarea {
  *
  * =================================================================== 
  */
-/** 
+/**
  * ===================================================================
  * 01. webfonts and iconfonts - (_document-setup.scss)
  *
@@ -2226,7 +2226,7 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/** 
+/**
  * ===================================================================
  * 07. other components - (_others.scss)
  *
@@ -2526,7 +2526,7 @@ input::-moz-focus-inner {
 .skill-bars li .percent100 {
   width: 100%;
 }
-/** 
+/**
  * ===================================================================
  * 08. common styles (_layout.scss)
  *
@@ -2537,6 +2537,9 @@ input::-moz-focus-inner {
 }
 .grey-section p.lead {
   color: #7d7d7d;
+}
+.white-section {
+  background: #FFFFFF;
 }
 .section-intro {
   max-width: 700px;
@@ -2587,7 +2590,7 @@ input::-moz-focus-inner {
     font-size: 2.4rem;
   }
 }
-/** 
+/**
  * ===================================================================
  * 09. header styles - (_layout.scss)
  *
@@ -2792,7 +2795,7 @@ header .logo a {
     left: 25px;
   }
 }
-/** 
+/**
  * ===================================================================
  * 10. intro - (_layout.scss) 
  *
@@ -2987,7 +2990,7 @@ header .logo a {
     font-size: 2.4rem;
   }
 }
-/** 
+/**
  * ===================================================================
  * 11. about - (_layout.scss)
  *
@@ -3120,25 +3123,25 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
-#resume {
+.resume-element {
   padding-top: 12rem;
   padding-bottom: 12rem;
 }
-#resume .resume-header {
+.resume-element .resume-header {
   text-align: center;
 }
-#resume .resume-header h2 {
+.resume-element .resume-header h2 {
   color: #44a2d7;
 }
-#resume .resume-timeline {
+.resume-element .resume-timeline {
   max-width: 980px;
 }
-#resume .timeline-wrap {
+.resume-element .timeline-wrap {
   position: relative;
   margin-top: 1.5rem;
   margin-bottom: 6rem;
 }
-#resume .timeline-wrap::before {
+.resume-element .timeline-wrap::before {
   content: "";
   display: block;
   width: 1px;
@@ -3148,11 +3151,11 @@ header .logo a {
   left: 35%;
   top: 0;
 }
-#resume .timeline-block {
+.resume-element .timeline-block {
   position: relative;
   padding-top: 1.5rem;
 }
-#resume .timeline-ico {
+.resume-element .timeline-ico {
   height: 4.8rem;
   width: 4.8rem;
   line-height: 4.8rem;
@@ -3165,34 +3168,34 @@ header .logo a {
   top: .9rem;
   margin-left: -2.4rem;
 }
-#resume .timeline-ico i {
+.resume-element .timeline-ico i {
   position: relative;
   left: .05rem;
   top: .2rem;
 }
-#resume .timeline-header {
+.resume-element .timeline-header {
   float: left;
   width: 35%;
   padding-right: 90px;
   text-align: right;
 }
-#resume .timeline-header h3 {
+.resume-element .timeline-header h3 {
   margin-bottom: 0;
 }
-#resume .timeline-header p {
+.resume-element .timeline-header p {
   font-family: "poppins-regular", sans-serif;
   font-size: 1.6rem;
   color: #888888;
 }
-#resume .timeline-content {
+.resume-element .timeline-content {
   margin-left: 35%;
   padding-left: 60px;
 }
-#resume .timeline-content h4 {
+.resume-element .timeline-content h4 {
   position: relative;
   padding-bottom: 1.8rem;
 }
-#resume .timeline-content h4::after {
+.resume-element .timeline-content h4::after {
   content: "";
   display: block;
   height: 3px;
@@ -3208,65 +3211,65 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 @media only screen and (max-width: 1024px) {
-  #resume .timeline-header {
+  .resume-element .timeline-header {
     padding-right: 50px;
   }
-  #resume .timeline-header h3 {
+  .resume-element .timeline-header h3 {
     font-size: 1.8rem;
   }
-  #resume .timeline-header p {
+  .resume-element .timeline-header p {
     font-size: 1.4rem;
   }
-  #resume .timeline-content {
+  .resume-element .timeline-content {
     padding-left: 50px;
   }
 }
 @media only screen and (max-width: 768px) {
-  #resume .timeline-wrap::before {
+  .resume-element .timeline-wrap::before {
     left: 2.4rem;
   }
-  #resume .timeline-ico {
+  .resume-element .timeline-ico {
     left: 2.4rem;
   }
-  #resume .timeline-header {
+  .resume-element .timeline-header {
     float: none;
     width: auto;
     padding-right: 15px;
     text-align: left;
   }
-  #resume .timeline-header h3 {
+  .resume-element .timeline-header h3 {
     font-size: 2rem;
   }
-  #resume .timeline-header p {
+  .resume-element .timeline-header p {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  #resume .timeline-content {
+  .resume-element .timeline-content {
     margin: 0;
   }
-  #resume .timeline-content h4 {
+  .resume-element .timeline-content h4 {
     padding-bottom: 0;
     padding-top: 2.1rem;
     margin-bottom: .6rem;
     font-size: 1.7rem;
   }
-  #resume .timeline-content h4::after {
+  .resume-element .timeline-content h4::after {
     bottom: auto;
     top: 0;
   }
-  #resume .timeline-header,
-  #resume .timeline-content {
+  .resume-element .timeline-header,
+  .resume-element .timeline-content {
     padding-left: 7rem;
   }
 }
 @media only screen and (max-width: 480px) {
-  #resume .resume-header h2 {
+  .resume-element .resume-header h2 {
     font-size: 2.2rem;
   }
-  #resume .timeline-wrap::before {
+  .resume-element .timeline-wrap::before {
     left: 1.8rem;
   }
-  #resume .timeline-ico {
+  .resume-element .timeline-ico {
     height: 3.6rem;
     width: 3.6rem;
     line-height: 3.6rem;
@@ -3274,12 +3277,12 @@ header .logo a {
     margin-left: -1.8rem;
     font-size: 1.5rem;
   }
-  #resume .timeline-header,
-  #resume .timeline-content {
+  .resume-element .timeline-header,
+  .resume-element .timeline-content {
     padding-left: 5.5rem;
   }
 }
-/** 
+/**
  * ===================================================================
  * 13. portfolio - (_layout.scss)
  *
@@ -3568,7 +3571,7 @@ header .logo a {
     font-size: 2.4rem;
   }
 }
-/** 
+/**
  * ===================================================================
  * 15. services - (_layout.scss)
  *
@@ -3651,7 +3654,7 @@ header .logo a {
 .owl-theme .owl-controls .owl-page.active span {
   background: #44a2d7;
 }
-/** 
+/**
  * ===================================================================
  * 16. stats - (_layout.scss)
  *
@@ -3715,7 +3718,7 @@ header .logo a {
     border: none;
   }
 }
-/** 
+/**
  * ===================================================================
  * 17. contact - (_layout.scss)
  *
@@ -3959,7 +3962,7 @@ header .logo a {
     transform: scale(1);
   }
 }
-/** 
+/**
  * ===================================================================
  * 18. footer - (_layout.scss)
  *
