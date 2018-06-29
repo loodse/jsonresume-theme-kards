@@ -56,6 +56,14 @@ Handlebars.registerHelper('skillLevel', function(str) {
 	}
 });
 
+Handlebars.registerHelper('join', function(val, delimiter, start, end) {
+    var arry = [].concat(val);
+    delimiter = ( typeof delimiter == "string" ? delimiter : ',' );
+    start = start || 0;
+    end = ( end === undefined ? arry.length : end );
+    return arry.slice(start, end).join(delimiter);
+});
+
 // Resume.json used to have website property in some entries.  This has been renamed to url.
 // However the demo data still uses the website property so we will also support the "wrong" property name.
 // Fix the resume object to use url property

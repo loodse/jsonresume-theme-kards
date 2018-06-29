@@ -172,6 +172,9 @@
                         <li>
                             <div class="progress percent{{skillLevel level}}"><span>{{skillLevel level}}%</span></div>
                             <strong>{{name}}</strong>
+                            {{#if keywords}}
+                                <small>{{join keywords ", "}}</small>
+                            {{/if}}
                         </li>
                     {{/each}}
 
@@ -185,7 +188,8 @@
         <div class="col-twelve">
             <a href="https://www.loodse.com/contact" title="Hire Me" class="button stroke ">Contact Us</a>
             <!--TODO link to PDF-->
-            <a href="#" title="Download CV" class="button button-primary">Download CV</a>
+            <a href="#" title="Download CV" class="button button-primary" onClick="window.print(); return false">Download
+                CV</a>
         </div>
     </div>
 
@@ -234,7 +238,7 @@
                             </div>
 
                             <div class="timeline-content">
-                                <h4>{{name}}</h4>
+                                <h4>{{name}}, {{location}}</h4>
                                 <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
                                 {{#if highlights}}
                                     <ul>
@@ -282,7 +286,7 @@
 
                             <div class="timeline-content">
                                 <h4>{{institution}}</h4>
-                                <p>{{area}}</p>
+                                <p>{{#markdown}}{{area}}{{/markdown}}</p>
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -326,9 +330,9 @@
                                 <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
                                 {{#if highlights}}
                                     <ul>
-                                    {{#each highlights}}
-                                        <li>{{this}}</li>
-                                    {{/each}}
+                                        {{#each highlights}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
                                     </ul>
                                 {{/if}}
                             </div>
@@ -370,9 +374,17 @@
                             </div>
 
                             <div class="timeline-content">
-                                <h4>{{publisher}}</h4>
+                                {{#if url}}
+                                    <a href="{{url}}" target="_blank">
+                                        <h4>{{publisher}}<i style="padding-left: 10px" class="fa fa-external-link"></i>
+                                        </h4></a>
+                                {{else}}
+                                    <h4>{{publisher}}</h4>
+                                {{/if}}
                                 <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
+
                                 <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
+
                             </div>
 
                         </div> <!-- /timeline-block -->
@@ -406,7 +418,7 @@
 
             <!--<div class="col-twelve resume-header">-->
 
-                <!--<h2>Projects</h2>-->
+            <!--<h2>Projects</h2>-->
 
             <!--</div> &lt;!&ndash; /resume-header &ndash;&gt;-->
 
@@ -427,9 +439,22 @@
                             </div>
 
                             <div class="timeline-content">
-                                <h4>{{description}}</h4>
+                                {{#if url}}
+                                    <a href="{{url}}" target="_blank">
+                                        <h4>{{description}}<i style="padding-left: 10px"
+                                                              class="fa fa-external-link"></i>
+                                        </h4></a>
+                                {{else}}
+                                    <h4>{{description}}</h4>
+                                {{/if}}
                                 <b><p>{{#markdown}}{{summary}}{{/markdown}}</p></b>
-                                <p>{{#markdown}}{{highlights}}{{/markdown}}</p>
+                                {{#if highlights}}
+                                    <ul>
+                                        {{#each highlights}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
                                 {{#if technologies}}<b>Technologies:</b>
                                     <ul>
                                         {{#each technologies}}
