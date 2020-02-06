@@ -14,7 +14,8 @@
   "homepage": "https://github.com/XuluWarrior/jsonresume-theme-kards",
   "scripts": {
     "build:styles": "lessc Kards10/less/styles.less Kards10/css/styles.css",
-    "release:prepare": "npm version patch -m \"Release: %s\""
+    "release:prepare": "npm version patch -m \"Release: %s\"",
+    "serve": "resume serve"
   },
   "dependencies": {
     "gulp": "^3.9.1",
@@ -26,6 +27,7 @@
     "moment": "^2.19.4"
   },
   "devDependencies": {
-    "less": "^2.7.3"
+    "less": "^2.7.3",
+    "resume-cli": "^1.2.7"
   }
 }
