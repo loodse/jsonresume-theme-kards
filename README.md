@@ -1,3 +1,10 @@
+# Forked Loodse Theme
+base https://github.com/XuluWarrior/jsonresume-theme-kards
+
+CVs can be found under https://github.com/kubermatic/cv
+
+---- 
+
 # JSON Resume Kards Theme 
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/XuluWarrior/jsonresume-theme-kards)
 
