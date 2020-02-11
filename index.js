@@ -56,22 +56,37 @@ Handlebars.registerHelper('award', function(str) {
 	}
 });
 
+function skillNameToPercentage(str) {
+  if (Number.isSafeInteger(str)){
+    return str;
+  }
+  switch (str.toLowerCase()) {
+    case "beginner":
+      return "25";
+    case "intermediate":
+      return "65";
+    case "advanced":
+      return "85";
+    case "master":
+      return 100;
+    default:
+      return parseInt(str);
+  }
+}
+
 Handlebars.registerHelper('skillLevel', function(str) {
 	if (str == undefined){
 		return 0;
 	}
-	switch (str.toLowerCase()) {
-		case "beginner":
-			return "25";
-		case "intermediate":
-			return "50";
-		case "advanced":
-			return "75";
-		case "master":
-			return "100";
-		default:
-			return parseInt(str);
+  return skillNameToPercentage(str);
+});
+
+Handlebars.registerHelper('skillLevelWidth', function(str) {
+	if (str == undefined){
+		return 100;
 	}
+	let int = Number(skillNameToPercentage(str));
+  return (int > 10) ? int - 10 : int;
 });
 
 Handlebars.registerHelper('join', function(val, delimiter, start, end) {

@@ -1,0 +1,38 @@
+/**
+ * small screens - (_grid.scss)
+ * ---------------------------------------------------------------
+ */
+
+@media print {
+  .row .row {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  [class*="col-"] {
+    padding: 14px 0;
+  }
+
+  header .top-bar {
+    display: none;
+  }
+
+  //.intro-overlay {
+  //  top: 60%;
+  //  height: 60%;
+  //}
+  .button-section {
+    display: none;
+  }
+
+  #go-top a {
+    display: none;
+  }
+
+  section {
+    padding-bottom: 0em !important;
+    padding-top: 2em !important;
+    page-break-inside: avoid;
+  }
+
+}

@@ -149,13 +149,13 @@
                     {{#if url}}
                         <li>
                             <strong>Website:</strong>
-                            <span>{{displayUrl url}}</span>
+                            <span><a href="{{url}}">{{displayUrl url}}</a></span>
                         </li>
                     {{/if}}
                     {{#if email}}
                         <li>
                             <strong>Email:</strong>
-                            <span>{{email}}</span>
+                            <span><a href="mailto:{{email}}">{{email}}</span>
                         </li>
                     {{/if}}
 
@@ -173,7 +173,7 @@
                     {{#each resume.skills}}
                         <li>
                             <div class="progress percent{{skillLevel level}}"><span>{{skillLevel level}}%</span></div>
-                            <strong>{{name}}</strong>
+                            <strong style="width: {{skillLevelWidth level}}%">{{name}}</strong>
                             <div style="height: 0.7rem"></div>
                             {{#if keywords}}
                                 <small>{{join keywords ", "}}</small>
@@ -194,7 +194,7 @@
         <div class="col-twelve">
             <a href="https://www.loodse.com/contact" title="Hire Me" class="button stroke ">Contact Us</a>
             <!--TODO link to PDF-->
-            <a href="#" title="Download CV" class="button button-primary" onClick="window.print(); return false">Download
+            <a href="#" title="Download CV" class="button button-primary" onClick="document.documentElement.scrollTop = 0; window.print(); return false">Download
                 CV</a>
         </div>
     </div>
@@ -305,6 +305,45 @@
         </div> <!-- /resume-timeline -->
     {{/if}}
 
+    {{#if resume.references}}
+      <div class="row resume-timeline">
+
+        <div class="col-twelve resume-header">
+
+          <h2>References & Awards</h2>
+
+        </div> <!-- /resume-header -->
+
+        <div class="col-twelve">
+
+          <div class="timeline-wrap">
+
+            {{#each resume.references}}
+              <div class="timeline-block">
+
+                <div class="timeline-ico">
+                  <i class="fa fa-trophy"></i>
+                </div>
+
+                <div class="timeline-header">
+                  <h3>{{institution}}</h3>
+                  <p>{{date date}}</p>
+                </div>
+
+                <div class="timeline-content">
+                  <h4>{{title}}</h4>
+                  <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                </div>
+
+              </div> <!-- /timeline-block -->
+            {{/each}}
+
+          </div> <!-- /timeline-wrap -->
+
+        </div> <!-- /col-twelve -->
+
+      </div> <!-- /resume-timeline -->
+    {{/if}}
     {{#if resume.volunteer}}
         <div class="row resume-timeline">
 
