@@ -7,6 +7,8 @@ resume.pdf
 resume.json
 .DS_Store
 .idea/
+.envrc
 .travis.yml
 Kards10/less/
 Kards10/images/
+tests/
